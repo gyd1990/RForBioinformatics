@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Vectors | R for Bioinformatics</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../GLOSSARY.html" />
+    
+    
+    <link rel="prev" href="../section3/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="3.1" data-basepath=".." data-revision="Mon Jul 06 2015 12:31:18 GMT-0400 (EDT)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="section1/index.html">
+            
+                
+                    <a href="../section1/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Overview of R
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="section2/index.html">
+            
+                
+                    <a href="../section2/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Getting Started with R
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="section2/Installation.html">
+            
+                
+                    <a href="../section2/Installation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Installation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="section3/index.html">
+            
+                
+                    <a href="../section3/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Data Types
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.1" data-path="section3/vectors.html">
+            
+                
+                    <a href="../section3/vectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Vectors
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="GLOSSARY.html">
+            
+                
+                    <a href="../GLOSSARY.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Glossary
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >R for Bioinformatics</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="introduction-to-r-vectors">Introduction to R Vectors</h1>
+<h2 id="learning-objectives">Learning objectives</h2>
+<ul>
+<li>Understand that there are many ways to create vectors</li>
+<li>Understand how vectors can be subset</li>
+<li>Understand that vectors can be used as indexes</li>
+<li>Understand that vector operations in R are usually the fastest way to perform computation</li>
+</ul>
+<h2 id="skills">Skills</h2>
+<ul>
+<li>Creating vectors</li>
+<li>Using vector operations</li>
+<li>Subsetting and indexing vectors</li>
+</ul>
+<h1 id="exercises">Exercises</h1>
+<h2 id="constructing-vectors">Constructing vectors</h2>
+<p>A vector is a sequence of data elements of the same basic type. Members in a vector are officially called components. Nevertheless, we will just call them members in this site.</p>
+<p>Here is a vector containing three numeric values 2, 3 and 5.</p>
+<pre><code class="lang-r">c(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
+</code></pre>
+<pre><code>## [1] 2 3 5
+</code></pre><p>And here is a vector of logical values.</p>
+<pre><code class="lang-r">c(<span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>, <span class="hljs-literal">FALSE</span>)
+</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE FALSE FALSE
+</code></pre><p>A vector can contain character strings.</p>
+<pre><code class="lang-r">c(<span class="hljs-string">&quot;aa&quot;</span>, <span class="hljs-string">&quot;bb&quot;</span>, <span class="hljs-string">&quot;cc&quot;</span>, <span class="hljs-string">&quot;dd&quot;</span>, <span class="hljs-string">&quot;ee&quot;</span>)
+</code></pre>
+<pre><code>## [1] &quot;aa&quot; &quot;bb&quot; &quot;cc&quot; &quot;dd&quot; &quot;ee&quot;
+</code></pre><p>Incidentally, the number of members in a vector is given by the length function.</p>
+<pre><code class="lang-r">length(c(<span class="hljs-string">&quot;aa&quot;</span>, <span class="hljs-string">&quot;bb&quot;</span>, <span class="hljs-string">&quot;cc&quot;</span>, <span class="hljs-string">&quot;dd&quot;</span>, <span class="hljs-string">&quot;ee&quot;</span>))
+</code></pre>
+<pre><code>## [1] 5
+</code></pre><p>Vectors can be combined via the function c. For examples, the following two vectors n and s are combined into a new vector containing elements from both vectors.</p>
+<pre><code class="lang-r">n = c(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>) 
+s = c(<span class="hljs-string">&quot;aa&quot;</span>, <span class="hljs-string">&quot;bb&quot;</span>, <span class="hljs-string">&quot;cc&quot;</span>, <span class="hljs-string">&quot;dd&quot;</span>, <span class="hljs-string">&quot;ee&quot;</span>) 
+c(n, s)
+</code></pre>
+<pre><code>## [1] &quot;2&quot;  &quot;3&quot;  &quot;5&quot;  &quot;aa&quot; &quot;bb&quot; &quot;cc&quot; &quot;dd&quot; &quot;ee&quot;
+</code></pre><p>In the code snippet above, notice how the numeric values are being coerced into character strings when the two vectors are combined. This is necessary so as to maintain the same primitive data type for members in the same vector. <em>Remember that vectors can contain only one data type.</em></p>
+<h2 id="vector-indexing">Vector indexing</h2>
+<p>We retrieve values in a vector by declaring an index inside a single square bracket &quot;[]&quot; operator.</p>
+<p>For example, the following shows how to retrieve a vector member. Since the vector index is 1-based, we use the index position 3 for retrieving the third member.</p>
+<pre><code class="lang-r">s = c(<span class="hljs-string">&quot;aa&quot;</span>, <span class="hljs-string">&quot;bb&quot;</span>, <span class="hljs-string">&quot;cc&quot;</span>, <span class="hljs-string">&quot;dd&quot;</span>, <span class="hljs-string">&quot;ee&quot;</span>) 
+s[<span class="hljs-number">3</span>]
+</code></pre>
+<pre><code>## [1] &quot;cc&quot;
+</code></pre><p>Unlike other programming languages, the square bracket operator returns more than just individual members. In fact, the result of the square bracket operator is another vector, and s[3] is a vector slice containing a single member &quot;cc&quot;.</p>
+<p>If the index is negative, it would strip the member whose position has the same absolute value as the negative index. For example, the following creates a vector slice with the third member removed.</p>
+<pre><code class="lang-r">s[-<span class="hljs-number">3</span>]
+</code></pre>
+<pre><code>## [1] &quot;aa&quot; &quot;bb&quot; &quot;dd&quot; &quot;ee&quot;
+</code></pre><p>If an index is out-of-range, a missing value will be reported via the symbol NA.</p>
+<pre><code class="lang-r">s[<span class="hljs-number">10</span>]
+</code></pre>
+<pre><code>## [1] NA
+</code></pre><h2 id="numeric-index-vectors">Numeric index vectors</h2>
+<p>A new vector can be sliced from a given vector with a numeric index vector, which consists of member positions of the original vector to be retrieved.</p>
+<p>Here it shows how to retrieve a vector slice containing the second and third members of a given vector s.</p>
+<pre><code class="lang-r">s = c(<span class="hljs-string">&quot;aa&quot;</span>, <span class="hljs-string">&quot;bb&quot;</span>, <span class="hljs-string">&quot;cc&quot;</span>, <span class="hljs-string">&quot;dd&quot;</span>, <span class="hljs-string">&quot;ee&quot;</span>) 
+s[c(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)]
+</code></pre>
+<pre><code>## [1] &quot;bb&quot; &quot;cc&quot;
+</code></pre><p>The index vector allows duplicate values. Hence the following retrieves a member twice in one operation.</p>
+<pre><code class="lang-r">s[c(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>)]
+</code></pre>
+<pre><code>## [1] &quot;bb&quot; &quot;cc&quot; &quot;cc&quot;
+</code></pre><p>The index vector can even be out-of-order. Here is a vector slice with the order of first and second members reversed.</p>
+<pre><code class="lang-r">s[c(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>)]
+</code></pre>
+<pre><code>## [1] &quot;bb&quot; &quot;aa&quot; &quot;cc&quot;
+</code></pre><p>To produce a vector slice between two indexes, we can use the colon operator &quot;:&quot;. This can be convenient for situations involving large vectors.</p>
+<pre><code class="lang-r">s[<span class="hljs-number">2</span>:<span class="hljs-number">4</span>]
+</code></pre>
+<pre><code>## [1] &quot;bb&quot; &quot;cc&quot; &quot;dd&quot;
+</code></pre><p>More information for the colon operator is available in the R documentation.</p>
+<pre><code class="lang-r">help(<span class="hljs-string">&quot;:&quot;</span>)
+</code></pre>
+<h2 id="logical-index-vectors">Logical index vectors</h2>
+<p>A new vector can be sliced from a given vector with a logical index vector, which has the same length as the original vector. Its members are TRUE if the corresponding members in the original vector are to be included in the slice, and FALSE if otherwise.</p>
+<p>For example, consider the following vector s of length 5.</p>
+<pre><code class="lang-r">s = c(<span class="hljs-string">&quot;aa&quot;</span>, <span class="hljs-string">&quot;bb&quot;</span>, <span class="hljs-string">&quot;cc&quot;</span>, <span class="hljs-string">&quot;dd&quot;</span>, <span class="hljs-string">&quot;ee&quot;</span>)
+</code></pre>
+<p>To retrieve the the second and fourth members of s, we define a logical vector L of the same length, and have its second and fourth members set as TRUE.</p>
+<pre><code class="lang-r">L = c(<span class="hljs-literal">FALSE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>) 
+s[L]
+</code></pre>
+<pre><code>## [1] &quot;bb&quot; &quot;dd&quot;
+</code></pre><p>The code can be abbreviated into a single line.</p>
+<pre><code class="lang-r">s[c(<span class="hljs-literal">FALSE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>, <span class="hljs-literal">TRUE</span>, <span class="hljs-literal">FALSE</span>)]
+</code></pre>
+<pre><code>## [1] &quot;bb&quot; &quot;dd&quot;
+</code></pre><h2 id="named-vector-members">Named vector members</h2>
+<p>We can assign names to vector members.</p>
+<p>For example, the following variable v is a character string vector with two members.</p>
+<pre><code class="lang-r">v = c(<span class="hljs-string">&quot;Mary&quot;</span>, <span class="hljs-string">&quot;Sue&quot;</span>) 
+v
+</code></pre>
+<pre><code>## [1] &quot;Mary&quot; &quot;Sue&quot;
+</code></pre><p>We now name the first member as First, and the second as Last.</p>
+<pre><code class="lang-r">names(v) = c(<span class="hljs-string">&quot;First&quot;</span>, <span class="hljs-string">&quot;Last&quot;</span>) 
+v
+</code></pre>
+<pre><code>##  First   Last 
+## &quot;Mary&quot;  &quot;Sue&quot;
+</code></pre><p>Then we can retrieve the first member by its name.</p>
+<pre><code class="lang-r">v[<span class="hljs-string">&quot;First&quot;</span>]
+</code></pre>
+<pre><code>##  First 
+## &quot;Mary&quot;
+</code></pre><p>Furthermore, we can reverse the order with a character string index vector.</p>
+<pre><code class="lang-r">v[c(<span class="hljs-string">&quot;Last&quot;</span>, <span class="hljs-string">&quot;First&quot;</span>)]
+</code></pre>
+<pre><code>##   Last  First 
+##  &quot;Sue&quot; &quot;Mary&quot;
+</code></pre>  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2851481-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../section3/index.html" class="navigation navigation-prev " aria-label="Previous page: Data Types"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../GLOSSARY.html" class="navigation navigation-next " aria-label="Next page: Glossary"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
