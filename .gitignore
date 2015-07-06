@@ -6,3 +6,5 @@ log/
 .Rhistory
 node_modules
 *.log
+figure/
+cache/

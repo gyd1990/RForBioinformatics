@@ -1,7 +1,10 @@
 # Overview of R
 
+The R software is many things to many people. It is used by literally millions of people worldwide from high school students to thought leaders in numerous quantitative disciplines.  It is free and open to anyone who wants to use it. For details, see the [R website](http://www.r-project.org).
+
 ## What is R?
 
+R is an integrated environment for data analysis, statistics, and programming. It is also a programming language based on the S language. The R software was written by [Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka) and [Robert Gentleman](https://en.wikipedia.org/wiki/Robert_Gentleman_(statistician)).  Because of R's extensibility, there are now thousands of extensions available, each written by authors who have chosen to contribute their work to the [community](http://watson.nci.nih.gov/cran_mirror/).
 - A software package
 - A programming language
 - A toolkit for developing statistical and analytical tools

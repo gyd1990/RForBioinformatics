@@ -1,0 +1,85 @@
+## Background
+
+The FASTQ format is a standard for storing sequence data and associated quality scores in a simple 
+text format file. A first step in many analyses is to perform basic quality control on the FASTQ
+files. The Bioconductor ShortRead package is quite useful for doing this with very little code.
+
+## Load libraries
+
+First, if the ShortRead package has not been installed, install it using the standard Biodonductor
+installation process.
+
+```{r bioclite,eval=FALSE}
+source('http://bioconductor.org/biocLite.R')
+biocLite('ShortRead')
+```
+
+Once installed, load the library:
+
+```{r loadshortread,warning=FALSE,message=FALSE}
+library(ShortRead)
+```
+
+## FASTQ Quality Control
+
+### Quality-by-cycle
+
+The ShortRead package includes some example FASTQ files. The way that we can find those files is
+to use `system.file`.  This function looks up the location of the ShortRead installation and 
+then finds files relative to that location. In this case, we are going to get the file locations
+for two small FASTQ files.
+
+```{r findfastq}
+# I just know from previous looking that the fastq files are here
+fastqDir = system.file(package='ShortRead','extdata/E-MTAB-1147')
+```
+
+Now, we can read the FASTQ files in this directory using `readFastq`.
+
+```{r readfastq}
+fq = readFastq(dirPath = fastqDir,pattern='*.fastq.gz')
+fq
+```
+
+The `fq` object now contains 40000 reads, each 72 bp (cycles) long. Next, we are going to 
+calculate the number of bases with each quality over each cycle.  
+
+```{r makequalmatrix}
+m = alphabetByCycle(quality(fq))
+dim(m)
+head(m[,1:8])
+```
+
+So, we have a matrix of numbers and we'd like to see if there is any structure in those numbers. A heatmap can be very useful for looking at matrices, so we can try that here.
+
+```{r heatmap}
+library(gplots)
+heatmap.2(log10(m[4:40,]+1),Rowv = NA, Colv=NA,trace="none")
+```
+
+* What does the heatmap show?
+
+### Nucleotide-by-cycle plot
+
+We can also look a the base-by-cycle of the actual sequences in our data using a similar approach.
+\
+```{r alphabetbycycle}
+m = alphabetByCycle(sread(fq))
+head(m[,1:8])
+```
+
+We can pull out only the bases we are interested in and then make a matrix plot to look at the 
+base biases along the length of the reads:
+
+```{r matplot}
+ms = t(m[c('A','C','G','T','N'),])
+matplot(ms,type='l',xlab='cycle',ylab='count',main='Alphabet by Cycle')
+```
+
+## Session Info
+
+```{r sessioninfo}
+sessionInfo()
+```
+
+  
