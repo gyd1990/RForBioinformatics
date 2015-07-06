@@ -1,0 +1,8 @@
+.Rproj.user
+_book/
+.rmdbuild
+*.DS_Store
+log/
+.Rhistory
+node_modules
+*.log
